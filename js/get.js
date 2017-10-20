@@ -1,7 +1,7 @@
 var https = require('https');
 var fs = require('fs');
 var args = process.argv.slice(2);
-var tables = ['SEMS_ACTIVE_SITES','TRI_FACILITY']
+var tables = ['SEMS_ARCHIVE_SITES','SEMS_ACTIVE_SITES','TRI_FACILITY']
 var getZip = function(zipcode,table) {
     var file = fs.createWriteStream('tmp/'+ table + '_' + zipcode + ".csv");
     var baseURL = 'https://iaspub.epa.gov/enviro/efservice/'
